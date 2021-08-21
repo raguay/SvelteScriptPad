@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>Bulletin Board</title>
+  <link rel="stylesheet" type="text/css" href="css/BulletinBoard.css">
+</head>
+
+<body>
+  <div id="main">
+    <div id='header'>
+      <div id='title-button-close'></div>
+      <p>BulletinBoard</p>
+    </div>
+    <h2 id='message'></h2>
+    <div id='dialog'></div>
+  </div>
+<!--
+  <script src='js/bulletinboard.js'></script>
+-->
+  <script>
+    nw.Window.get().evalNWBin(null,'Modules/BulletinBoard/js/bulletinboard.bin')
+  </script>
+</body>
+</html>

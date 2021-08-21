@@ -1,0 +1,63 @@
+body {
+    display: inline;
+    font-family: 'Lucida Console', Monaco, monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 8px;
+    padding: 10px;
+    background-color: #191B1E;
+    color: #F8F8F0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    clear: both;
+}
+
+#main {
+    display: inline;
+    clear: both;
+}
+
+h2 {
+    margin: 5px 5px 5px 5px;
+    padding: 0px;
+    font-size: 24px;
+    font-family: 'Lucida Console', Monaco, monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#header {
+    display: inline;
+    -webkit-app-region: drag;
+    background-color: #191B1E;
+    color: #F8F8F0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 170px;
+    height: 25px;
+}
+
+#header p {
+    margin: 0px 0px 0px 0px;
+    position: absolute;
+    top: 0px;
+    left: 35px;
+}
+
+#title-button-close {
+    display: inline-block;
+    -webkit-app-region: no-drag;
+    height: 12px;
+    width: 12px;
+    background-color: red;
+    border-radius: 12px;
+    align-items: center;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}

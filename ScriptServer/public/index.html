@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf8'>
+	<meta name='viewport' content='width=device-width'>
+
+	<title>Svelte app</title>
+
+	<link rel='icon' type='image/png' href='favicon.png'>
+	<link rel='stylesheet' href='global.css'>
+	<link rel='stylesheet' href='bundle.css'>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		io = io();
+		io.on('connection', function(socket){
+			window.io = socket;
+		});
+	</script>
+</head>
+
+<body>
+	<script src='bundle.js'></script>
+</body>
+</html>

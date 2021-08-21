@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <title>ScriptBar</title>
+  <link rel="stylesheet" type="text/css" href="public/bundle.css">
+<!--
+  <script src='public/bundle.js'></script>
+-->
+  <script>
+    window.child = require('child_process');
+    window.fs = require('fs');
+    window.exec = window.child.exec;
+    window.npath = require('path');
+    var AU = require('ansi_up');
+    window.ansi_up = new AU.default;
+    window.nw = nw;
+    
+    if(window.fs.existsSync('public/bundle.bin')) {
+      nw.Window.get().evalNWBin(null,'public/bundle.bin');
+    } else {
+      nw.Window.get().evalNWBin(null,'Modules/ScriptBar/public/bundle.bin');
+    }
+  </script>
+</head>
+
+<body>
+</body>
+</html>

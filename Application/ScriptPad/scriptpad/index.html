@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf8'>
+    <meta name='viewport' content='width=device-width'>
+    <title>ScriptPad</title>
+    <link rel="stylesheet" href="codemirror/codemirror.css" />
+    <link rel="stylesheet" href="codemirror/addon/dialog/dialog.css" />
+    <link rel="stylesheet" href="editorThemes/oceanic-next.css" />
+    <link rel="stylesheet" href="editorThemes/oceanic-changed.css" />
+    <link rel="stylesheet" href="editorThemes/3024-day.css" />
+    <link rel="stylesheet" href="editorThemes/3024-night.css" />
+    <link rel="stylesheet" href="editorThemes/abcdef.css" />
+    <link rel="stylesheet" href="editorThemes/ambiance-mobile.css" />
+    <link rel="stylesheet" href="editorThemes/ambiance.css" />
+    <link rel="stylesheet" href="editorThemes/ayu-dark.css" />
+    <link rel="stylesheet" href="editorThemes/ayu-mirage.css" />
+    <link rel="stylesheet" href="editorThemes/base16-dark.css" />
+    <link rel="stylesheet" href="editorThemes/base16-light.css" />
+    <link rel="stylesheet" href="editorThemes/bespin.css" />
+    <link rel="stylesheet" href="editorThemes/blackboard.css" />
+    <link rel="stylesheet" href="editorThemes/cobalt.css" />
+    <link rel="stylesheet" href="editorThemes/colorforth.css" />
+    <link rel="stylesheet" href="editorThemes/darcula.css" />
+    <link rel="stylesheet" href="editorThemes/dracula.css" />
+    <link rel="stylesheet" href="editorThemes/duotone-dark.css" />
+    <link rel="stylesheet" href="editorThemes/duotone-light.css" />
+    <link rel="stylesheet" href="editorThemes/eclipse.css" />
+    <link rel="stylesheet" href="editorThemes/elegant.css" />
+    <link rel="stylesheet" href="editorThemes/erlang-dark.css" />
+    <link rel="stylesheet" href="editorThemes/gruvbox-dark.css" />
+    <link rel="stylesheet" href="editorThemes/hopscotch.css" />
+    <link rel="stylesheet" href="editorThemes/icecoder.css" />
+    <link rel="stylesheet" href="editorThemes/idea.css" />
+    <link rel="stylesheet" href="editorThemes/isotope.css" />
+    <link rel="stylesheet" href="editorThemes/lesser-dark.css" />
+    <link rel="stylesheet" href="editorThemes/liquibyte.css" />
+    <link rel="stylesheet" href="editorThemes/lucario.css" />
+    <link rel="stylesheet" href="editorThemes/material-darker.css" />
+    <link rel="stylesheet" href="editorThemes/material-ocean.css" />
+    <link rel="stylesheet" href="editorThemes/material-palenight.css" />
+    <link rel="stylesheet" href="editorThemes/material.css" />
+    <link rel="stylesheet" href="editorThemes/mbo.css" />
+    <link rel="stylesheet" href="editorThemes/mdn-like.css" />
+    <link rel="stylesheet" href="editorThemes/midnight.css" />
+    <link rel="stylesheet" href="editorThemes/monokai.css" />
+    <link rel="stylesheet" href="editorThemes/moxer.css" />
+    <link rel="stylesheet" href="editorThemes/neat.css" />
+    <link rel="stylesheet" href="editorThemes/neo.css" />
+    <link rel="stylesheet" href="editorThemes/night.css" />
+    <link rel="stylesheet" href="editorThemes/nord.css" />
+    <link rel="stylesheet" href="editorThemes/panda-syntax.css" />
+    <link rel="stylesheet" href="editorThemes/paraiso-dark.css" />
+    <link rel="stylesheet" href="editorThemes/paraiso-light.css" />
+    <link rel="stylesheet" href="editorThemes/pastel-on-dark.css" />
+    <link rel="stylesheet" href="editorThemes/railscasts.css" />
+    <link rel="stylesheet" href="editorThemes/rubyblue.css" />
+    <link rel="stylesheet" href="editorThemes/seti.css" />
+    <link rel="stylesheet" href="editorThemes/shadowfox.css" />
+    <link rel="stylesheet" href="editorThemes/solarized.css" />
+    <link rel="stylesheet" href="editorThemes/ssms.css" />
+    <link rel="stylesheet" href="editorThemes/the-matrix.css" />
+    <link rel="stylesheet" href="editorThemes/tomorrow-night-bright.css" />
+    <link rel="stylesheet" href="editorThemes/tomorrow-night-eighties.css" />
+    <link rel="stylesheet" href="editorThemes/ttcn.css" />
+    <link rel="stylesheet" href="editorThemes/twilight.css" />
+    <link rel="stylesheet" href="editorThemes/vibrant-ink.css" />
+    <link rel="stylesheet" href="editorThemes/xq-dark.css" />
+    <link rel="stylesheet" href="editorThemes/xq-light.css" />
+    <link rel="stylesheet" href="editorThemes/yeti.css" />
+    <link rel="stylesheet" href="editorThemes/yonce.css" />
+    <link rel="stylesheet" href="editorThemes/zenburn.css" />
+    <script src="codemirror/codemirror.js"></script>
+    <script src="codemirror/markdown.js"></script>
+    <script src="codemirror/javascript.js"></script>
+    <script src="codemirror/addon/display/panel.js"></script>
+    <script src="codemirror/addon/dialog/dialog.js"></script>
+    <script src="codemirror/addon/edit/closebrackets.js"></script>
+    <script src="codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="codemirror/addon/search/jump-to-line.js"></script>
+    <script src="codemirror/addon/search/searchcursor.js"></script>
+    <script src="codemirror/addon/search/search.js"></script>
+    <script src="codemirror/addon/selection/active-line.js"></script>
+    <script src="codemirror/vim.js"></script>
+    <script src="codemirror/emacs.js"></script>
+    <script src="codemirror/sublime.js"></script>
+    <script>
+      window.nw = nw;
+      window.fs = require('fs');
+      window.fsex = require('fs-extra');
+      window.os = require('os');
+      window.chokidar = require('chokidar');
+      window.childProcess = require('child_process');
+      window.CodeMirror = CodeMirror;
+      window.express = require('express');
+      window.bodyparser = require('body-parser');
+      window.http = require('http');
+      window.axios = require('axios');
+      window.process = require('process');
+      window.mathjs = require('mathjs');
+      window.nodered = require('node-red');
+      window.socketio = require('socket.io');
+    </script>
+    <link rel='stylesheet' href='css/global.css'>
+    <link rel='stylesheet' href='css/bundle.css'>
+  </head>
+  <body>
+ <!--
+ <script src="js/bundle.js"></script>
+ -->
+   <script> 
+      nw.Window.get().evalNWBin(null,'./scriptpad/js/bundle.bin');
+    </script>
+ </body>
+</html>
